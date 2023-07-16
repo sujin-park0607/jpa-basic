@@ -10,8 +10,8 @@ public class Member {
     private Long id;
     private String userName;
 
-    @ManyToOne
-    @JoinColumn(name= "TEAM_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
     private Team team;
 
     public Long getId() {
